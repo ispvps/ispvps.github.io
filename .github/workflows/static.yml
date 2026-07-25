@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # 直接使用已提交的静态文件
-          path: ./web/dist
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
