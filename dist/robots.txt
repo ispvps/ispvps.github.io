@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ispvps.github.io/sitemap-index.xml

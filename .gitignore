@@ -1,0 +1,13 @@
+# Ignore everything by default
+*
+
+# Allow the public directory and its contents
+!dist/
+!dist/**
+
+!.github/
+!.github/**
+
+# Keep the repository files
+!/.gitignore
+!README.md
