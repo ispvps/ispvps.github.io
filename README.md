@@ -19,7 +19,7 @@
 以下是站内综合评测中，评分较高、口碑相对稳定的几家，具体配置、价格和优惠码请点进详情页查看：
 
 - **[丽萨主机 LisaHost](https://ispvps.github.io/lisahost/)**（评分 9.2）——双 ISP 住宅原生 IP，综合测评表现最突出，[实测评测报告](https://ispvps.github.io/lisahost/lisahost-us-4837-review/) 里有完整的纯净度检测和跑分数据。
-- **[VIRCS](https://ispvps.github.io/vircs/)**（评分 8.8）——美国真实住宅宽带 IP，适合对 IP 纯净度要求高的场景。
+- **[AaITR](https://ispvps.github.io/aaitr/)**（评分 8.1）——美国真实民宅住宅 IP（AT&T / Frontier 真实家宽直拉），提供独享静态与动态 NAT 两种形态。
 - **[ByteVirt](https://ispvps.github.io/bytevirt/)**（评分 8.4）——覆盖香港/台湾/日本，跨境多地区业务的常见选择。
 - **[ZoroCloud](https://ispvps.github.io/zorocloud/)**（评分 8.4）——家宽住宅 IP 与原生双 ISP 兼具。
 - **[诺联主机 NovixLink](https://ispvps.github.io/novixlink/)**（评分 8.2）——美国原生双 ISP，同样附有 [详细实测评测](https://ispvps.github.io/novixlink/novixlink-lax-bgp-review/)。
