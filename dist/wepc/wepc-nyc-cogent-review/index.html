@@ -1,0 +1,483 @@
+<!DOCTYPE html><html lang="zh-CN"><head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v7.1.3"><!-- Canonical URL --><link rel="canonical" href="https://ispvps.github.io/wepc/wepc-nyc-cogent-review/"><!-- Primary Meta Tags --><title>WePC 美国纽约 Cogent 家宽 VPS 深度测评：四库判定家宽、低丢包，但 IPQS 高风险与 Google 识别为中国</title><meta name="title" content="WePC 美国纽约 Cogent 家宽 VPS 深度测评：四库判定家宽、低丢包，但 IPQS 高风险与 Google 识别为中国"><meta name="description" content="实测 WePC 美国纽约 Cogent_家宽 1 核 512MB 套餐：IPQuality 多库属性与风险评分、Tcptest 全国 Ping 与丢包、上海电信回程路由、家庭宽带 iperf3（BBR 前后对比）、硬件压测、国际测速与流媒体/AI 解锁全记录。"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://ispvps.github.io/wepc/wepc-nyc-cogent-review/"><meta property="og:title" content="WePC 美国纽约 Cogent 家宽 VPS 深度测评：四库判定家宽、低丢包，但 IPQS 高风险与 Google 识别为中国"><meta property="og:description" content="实测 WePC 美国纽约 Cogent_家宽 1 核 512MB 套餐：IPQuality 多库属性与风险评分、Tcptest 全国 Ping 与丢包、上海电信回程路由、家庭宽带 iperf3（BBR 前后对比）、硬件压测、国际测速与流媒体/AI 解锁全记录。"><meta property="og:image" content="https://ispvps.github.io/og-image.png"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://ispvps.github.io/wepc/wepc-nyc-cogent-review/"><meta property="twitter:title" content="WePC 美国纽约 Cogent 家宽 VPS 深度测评：四库判定家宽、低丢包，但 IPQS 高风险与 Google 识别为中国"><meta property="twitter:description" content="实测 WePC 美国纽约 Cogent_家宽 1 核 512MB 套餐：IPQuality 多库属性与风险评分、Tcptest 全国 Ping 与丢包、上海电信回程路由、家庭宽带 iperf3（BBR 前后对比）、硬件压测、国际测速与流媒体/AI 解锁全记录。"><meta property="twitter:image" content="https://ispvps.github.io/og-image.png"><link rel="stylesheet" href="/_astro/BaseLayout.DU_uW0sR.css"><style>.coupon-widget-demo[data-astro-cid-bc36j37d]{border:2px dashed var(--accent-purple);border-radius:var(--radius-card);background:linear-gradient(135deg,#faf5ff,#eff6ff);grid-template-columns:220px 1fr auto;align-items:center;gap:20px;padding:18px 24px;display:grid}@media (width<=640px){.coupon-widget-demo[data-astro-cid-bc36j37d]{grid-template-columns:1fr}}.coupon-provider-info[data-astro-cid-bc36j37d]{align-items:center;gap:12px;display:flex;overflow:hidden}.coupon-provider-avatar[data-astro-cid-bc36j37d]{background:linear-gradient(135deg, var(--accent-purple), var(--accent-blue));color:#fff;border-radius:12px;flex-shrink:0;justify-content:center;align-items:center;width:44px;height:44px;font-size:14px;font-weight:800;display:flex}.coupon-provider-name[data-astro-cid-bc36j37d]{color:var(--text-title);white-space:nowrap;text-overflow:ellipsis;font-size:15px;font-weight:700;overflow:hidden}.coupon-middle[data-astro-cid-bc36j37d]{min-width:0}.coupon-no-code[data-astro-cid-bc36j37d]{color:var(--text-muted);margin-top:4px;font-size:13px;font-style:italic}.coupon-cta-btn[data-astro-cid-bc36j37d]{white-space:nowrap;cursor:pointer;border:none}
+</style><style>details[data-astro-cid-muhqq4qj]>summary[data-astro-cid-muhqq4qj]::-webkit-details-marker{display:none}
+</style><style>.screenshot-card[data-astro-cid-pmiqfeva]{border:1px solid var(--card-border);border-radius:var(--radius-card);box-shadow:var(--card-shadow);background:#fff;flex-direction:column;height:100%;margin:24px 0;display:flex;overflow:hidden}.screenshot-img-wrap[data-astro-cid-pmiqfeva]{background:var(--bg-sub);justify-content:center;padding:10px;display:flex;position:relative}.screenshot-card[data-astro-cid-pmiqfeva] img[data-astro-cid-pmiqfeva]{border-radius:8px;max-width:100%;height:auto;display:block}.screenshot-zoomable[data-astro-cid-pmiqfeva]{cursor:zoom-in;transition:filter .15s}.screenshot-img-wrap[data-astro-cid-pmiqfeva]:hover .screenshot-zoomable[data-astro-cid-pmiqfeva]{filter:brightness(.94)}.screenshot-zoom-hint[data-astro-cid-pmiqfeva]{color:#fff;opacity:0;pointer-events:none;background:#0f172ab8;border-radius:20px;padding:4px 10px;font-size:11.5px;font-weight:600;transition:opacity .15s;position:absolute;bottom:20px;right:20px}.screenshot-img-wrap[data-astro-cid-pmiqfeva]:hover .screenshot-zoom-hint[data-astro-cid-pmiqfeva]{opacity:1}.screenshot-card[data-astro-cid-pmiqfeva] figcaption[data-astro-cid-pmiqfeva]{color:var(--text-muted);text-align:center;border-top:1px solid var(--card-border);background:#fff;margin-top:auto;padding:10px 16px;font-size:12.5px;line-height:1.5}#screenshot-lightbox{backdrop-filter:blur(2px);z-index:999;cursor:zoom-out;background:#0f172ad9;justify-content:center;align-items:center;padding:32px;display:none;position:fixed;inset:0}#screenshot-lightbox.open{display:flex}#screenshot-lightbox img{border-radius:10px;max-width:100%;max-height:100%;display:block;box-shadow:0 20px 60px #00000080}#screenshot-lightbox .screenshot-lightbox-close{color:#fff;cursor:pointer;background:#ffffff1f;border:1px solid #ffffff40;border-radius:50%;justify-content:center;align-items:center;width:40px;height:40px;font-size:20px;line-height:1;display:flex;position:fixed;top:20px;right:24px}#screenshot-lightbox .screenshot-lightbox-close:hover{background:#ffffff38}
+</style></head><body class="flex flex-col min-h-screen"><header class="bg-white/90 backdrop-blur-md border-b border-card-border sticky top-0 z-50"><div class="max-w-[1200px] mx-auto px-6 py-4 flex justify-between items-center"><!-- Logo --><a href="/" class="flex items-center gap-3 no-underline flex-shrink-0"><div class="w-10 h-10 bg-gradient-to-br from-accent-purple to-accent-blue rounded-xl flex items-center justify-center font-extrabold text-white text-base shadow-md">ISP</div><div class="font-heading font-extrabold text-xl text-text-title tracking-tight">ISPVPS<span class="text-accent-purple">.github.io</span></div></a><!-- Desktop Nav --><nav class="hidden md:flex items-center gap-1 font-semibold text-sm" aria-label="主导航"><a href="/use-cases" class="px-3 py-2 rounded-lg text-text-main hover:text-accent-purple hover:bg-accent-purple-light transition-all no-underline">🎯 场景方案</a><a href="/regions" class="px-3 py-2 rounded-lg text-text-main hover:text-accent-purple hover:bg-accent-purple-light transition-all no-underline">🌍 地区导航</a><a href="/reviews" class="px-3 py-2 rounded-lg text-text-main hover:text-accent-purple hover:bg-accent-purple-light transition-all no-underline">🔬 深度评测</a><a href="/providers" class="px-3 py-2 rounded-lg text-text-main hover:text-accent-purple hover:bg-accent-purple-light transition-all no-underline">🏢 品牌专区</a><a href="/coupons" class="relative px-3 py-2 rounded-lg text-text-main hover:text-accent-purple hover:bg-accent-purple-light transition-all no-underline">💰 最新优惠<span class="absolute 1 top-0 right-0 text-[10px] bg-red-500 text-white px-1 py-0.5 rounded-full leading-none font-bold animate-pulse transform translate-x-1/4 -translate-y-1/4">HOT</span></a><a href="/tutorials" class="px-3 py-2 rounded-lg text-text-main hover:text-accent-purple hover:bg-accent-purple-light transition-all no-underline">📚 硬核科普</a></nav><!-- Right side: badge + hamburger --><div class="flex items-center gap-3"><span class="status-badge hidden md:inline-flex">🟢 数据已更新</span><!-- Mobile Hamburger --><button class="hamburger-btn md:hidden" id="hamburger-btn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button></div></div><!-- Mobile Nav --><nav class="mobile-nav md:hidden" id="mobile-menu" aria-label="移动端导航"><a href="/use-cases">🎯 场景方案</a><a href="/regions">🌍 地区导航</a><a href="/reviews">🔬 深度评测</a><a href="/providers">🏢 品牌专区</a><a href="/coupons">💰 最新优惠 <span class="text-[10px] bg-red-500 text-white px-1.5 py-0.5 rounded-full leading-none font-bold ml-1 animate-pulse inline-block">HOT</span></a><a href="/tutorials">📚 硬核科普</a></nav></header><script type="module">var e=document.getElementById(`hamburger-btn`),t=document.getElementById(`mobile-menu`);function n(){t?.classList.add(`open`),e?.classList.add(`open`),e?.setAttribute(`aria-expanded`,`true`),document.body.style.overflow=`hidden`}function r(){t?.classList.remove(`open`),e?.classList.remove(`open`),e?.setAttribute(`aria-expanded`,`false`),document.body.style.overflow=``}e?.addEventListener(`click`,()=>{t?.classList.contains(`open`)?r():n()}),t?.querySelectorAll(`a`).forEach(e=>{e.addEventListener(`click`,r)}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&t?.classList.contains(`open`)&&r()});</script><main class="flex-grow"><div class="max-w-[1200px] mx-auto px-6 py-8"><nav class="flex text-sm text-text-muted mb-6" aria-label="Breadcrumb"><ol class="inline-flex flex-wrap items-center gap-y-1 space-x-1 md:space-x-2"><li class="inline-flex items-center"><a href="/" class="inline-flex items-center whitespace-nowrap hover:text-accent-purple transition-colors"><svg class="w-4 h-4 mr-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>首页</a></li><li><div class="flex items-center"><svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg><a href="/wepc" class="ml-1 md:ml-2 hover:text-accent-purple transition-colors truncate max-w-[150px]">WePC</a></div></li><li><div class="flex items-center"><svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg><span class="ml-1 md:ml-2 text-text-main font-semibold truncate max-w-[200px]" aria-current="page">WePC 美国纽约 Cogent 家宽 VPS 深度测评：四库判定家宽、低丢包，但 IPQS 高风险与 Google 识别为中国</span></div></li></ol></nav><div class="flex flex-col lg:flex-row gap-8 lg:items-start"><!-- 主内容区 --><article class="w-full flex-1 min-w-0 bg-white rounded-2xl p-8 md:p-10 border border-card-border shadow-sm" style="overflow: clip;"><header class="mb-8 border-b border-card-border pb-6"><h1 class="text-3xl md:text-4xl font-extrabold font-heading text-text-title mb-3 leading-tight">WePC 美国纽约 Cogent 家宽 VPS 深度测评：四库判定家宽、低丢包，但 IPQS 高风险与 Google 识别为中国</h1><p class="text-lg text-text-muted leading-relaxed">实测 WePC 美国纽约 Cogent_家宽 1 核 512MB 套餐：IPQuality 多库属性与风险评分、Tcptest 全国 Ping 与丢包、上海电信回程路由、家庭宽带 iperf3（BBR 前后对比）、硬件压测、国际测速与流媒体/AI 解锁全记录。</p></header><!-- 移动端折叠目录 (仅在 lg 以下显示) --><details class="mobile-toc lg:hidden mb-8"><summary class="mobile-toc-summary"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="15" y2="12"></line><line x1="3" y1="18" x2="18" y2="18"></line></svg>文章目录<svg class="mobile-toc-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></summary><nav class="mobile-toc-list"><a href="#核心数据面板" class="mobile-toc-item depth-2">核心数据面板</a><a href="#测试环境与方法说明" class="mobile-toc-item depth-2">测试环境与方法说明</a><a href="#ip-纯净度检测四库家宽但-ipqs-给出-94-分" class="mobile-toc-item depth-2">IP 纯净度检测：四库家宽，但 IPQS 给出 94 分</a><a href="#ip-类型属性" class="mobile-toc-item depth-3">IP 类型属性</a><a href="#风险评分与风险因子" class="mobile-toc-item depth-3">风险评分与风险因子</a><a href="#三网-ping-值与丢包测试" class="mobile-toc-item depth-2">三网 Ping 值与丢包测试</a><a href="#tcptest-全国-ping-值" class="mobile-toc-item depth-3">Tcptest 全国 Ping 值</a><a href="#持续-ping-丢包率" class="mobile-toc-item depth-3">持续 Ping 丢包率</a><a href="#回程路由测试" class="mobile-toc-item depth-2">回程路由测试</a><a href="#家庭宽带实际下载速度iperf3" class="mobile-toc-item depth-2">家庭宽带实际下载速度（iperf3）</a><a href="#硬件配置与性能压测" class="mobile-toc-item depth-2">硬件配置与性能压测</a><a href="#国际出口带宽测速" class="mobile-toc-item depth-2">国际出口带宽测速</a><a href="#流媒体与-ai-服务解锁实测" class="mobile-toc-item depth-2">流媒体与 AI 服务解锁实测</a><a href="#邮局连通性与黑名单检测" class="mobile-toc-item depth-2">邮局连通性与黑名单检测</a><a href="#优缺点总结" class="mobile-toc-item depth-2">优缺点总结</a><a href="#套餐推荐与优惠" class="mobile-toc-item depth-2">套餐推荐与优惠</a><a href="#常见问题" class="mobile-toc-item depth-2">常见问题</a><a href="#结论" class="mobile-toc-item depth-2">结论</a></nav></details><!-- MDX 内容区 --><div class="prose prose-slate max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-accent-purple hover:prose-a:text-accent-blue prose-img:rounded-xl prose-img:shadow-md"><h2 id="核心数据面板">核心数据面板</h2>
+<p>本次测评的是 WePC 美国机房的 <strong>「美国纽约Cogent_家宽」</strong>（¥61.07/月），官方规格为 1 核 / 512 MB / 10 GB SSD / 200 Mbps / 1.5 TB 流量。测试节点位于美国纽约，IP 归属 <strong>AS174 Cogent Communications, LLC</strong>，Maxmind 数据库判定为<strong>原生 IP</strong>。</p>
+<div class="master-dashboard-demo my-8"><!-- 诊断结论 Header --><div class="flex items-center gap-4 border-b border-card-border pb-4 mb-4"><div class="score-circle-demo flex-shrink-0" title="综合评分">8.1</div><div><div class="text-base font-extrabold text-text-title">IP 诊断结论：🔴 存在高风险判定库</div><div class="text-xs text-text-muted">测试节点: <code class="bg-bg-sub px-1 py-0.5 rounded text-text-title font-mono">WePC 纽约 Cogent 家宽 (美国 纽约)</code> | IP 类型：原生家宽 | 适合面向美东 / 欧洲、不依赖 Google 生态的业务</div></div></div><!-- 4 大 Tab 标签页 --><div class="master-tabs"><button class="tab-btn active text-xs font-semibold px-4 py-2 rounded-lg" data-tab="tab-1">📊 风控评分</button><button class="tab-btn text-xs font-semibold px-4 py-2 rounded-lg" data-tab="tab-2">🔍 数据库属性</button><button class="tab-btn text-xs font-semibold px-4 py-2 rounded-lg" data-tab="tab-3">🤖 AI & 解锁</button><button class="tab-btn text-xs font-semibold px-4 py-2 rounded-lg" data-tab="tab-4">✉️ 邮局 / 黑名单</button></div><!-- Tab 内容区域 --><div class="tab-contents"><!-- Tab 1 --><div data-panel="tab-1" class="tab-content"><h5 class="text-xs font-bold text-accent-purple mb-3">👇 风控评分与风险因子 (多库深度复核)</h5><div class="data-grid-5 mb-4"><div class="data-card-mini"><div class="db-name">IP2Location</div><div class="db-score text-accent-emerald">3 | 低风险</div></div><div class="data-card-mini"><div class="db-name">Scamalytics</div><div class="db-score text-accent-emerald">0 | 低风险</div></div><div class="data-card-mini"><div class="db-name">ipapi</div><div class="db-score text-accent-emerald">0.00% | 极低风险</div></div><div class="data-card-mini"><div class="db-name">AbuseIPDB</div><div class="db-score text-accent-emerald">0 | 低风险</div></div><div class="data-card-mini"><div class="db-name">IPQS</div><div class="db-score text-accent-red">94 | 高风险</div></div></div><div class="table-container-demo"><table><thead><tr><th>风险因子</th><th>标记该因子的数据库</th></tr></thead><tbody><tr><td><strong>代理</strong></td><td><span class="tag-danger mr-1">IPQS</span></td></tr><tr><td><strong>VPN</strong></td><td><span class="tag-danger mr-1">IPQS</span></td></tr><tr><td><strong>服务器</strong></td><td><span class="tag-danger mr-1">IP2Location</span><span class="tag-danger mr-1">ipapi</span></td></tr><tr><td><strong>其余因子</strong></td><td><span class="tag-success">各库均未标记</span></td></tr></tbody></table></div></div><!-- Tab 2 --><div data-panel="tab-2" class="tab-content hidden"><h5 class="text-xs font-bold text-accent-purple mb-3">👇 数据库属性与原生辨析</h5><div class="table-container-demo"><table><thead><tr><th>数据库</th><th>IPinfo</th><th>ipregistry</th><th>ipapi</th><th>AbuseIPDB</th><th>IP2Location</th><th>结论判定</th></tr></thead><tbody><tr><td><strong>使用类型</strong></td><td><span class="tag-success">家宽</span></td><td><span class="tag-success">家宽</span></td><td><span class="tag-success">家宽</span></td><td><span class="tag-success">家宽</span></td><td><span class="tag-danger">机房</span></td><td><span class="tag-warning">4/5 库判定家宽</span></td></tr></tbody></table></div></div><!-- Tab 3 --><div data-panel="tab-3" class="tab-content hidden"><h5 class="text-xs font-bold text-accent-purple mb-3">👇 AI & 流媒体解锁矩阵</h5><div class="table-container-demo"><table><thead><tr><th>服务</th><th>状态</th><th>说明</th></tr></thead><tbody><tr><td><strong>TikTok</strong></td><td><span class="tag-success">✅ 解锁</span></td><td>原生 (US)</td></tr><tr><td><strong>Netflix</strong></td><td><span class="tag-success">✅ 解锁</span></td><td>原生 (US)</td></tr><tr><td><strong>Disney+</strong></td><td><span class="tag-success">✅ 解锁</span></td><td>原生 (US)</td></tr><tr><td><strong>ChatGPT</strong></td><td><span class="tag-success">✅ 解锁</span></td><td>原生</td></tr><tr><td><strong>Claude</strong></td><td><span class="tag-success">✅ 解锁</span></td><td>—</td></tr><tr><td><strong>YouTube Premium</strong></td><td><span class="tag-danger">❌ 不可用</span></td><td>Google 识别为 CN</td></tr><tr><td><strong>Google Gemini</strong></td><td><span class="tag-danger">❌ 不可用</span></td><td>Google 识别为 CN</td></tr><tr><td><strong>Google Play</strong></td><td><span class="tag-warning">⚠️ 受限</span></td><td>区域为 China</td></tr><tr><td><strong>Spotify 注册</strong></td><td><span class="tag-danger">❌ 不可用</span></td><td>—</td></tr></tbody></table></div></div><!-- Tab 4 --><div data-panel="tab-4" class="tab-content hidden"><h5 class="text-xs font-bold text-accent-purple mb-3">👇 邮局 25 端口与黑名单</h5><div class="bg-bg-main p-4 rounded-xl border border-card-border"><div class="text-xs text-text-main mb-2">📧 25 端口出站通信：<span class="tag-success">端口可用 (Gmail / Outlook / Yahoo / QQ / 163)</span></div><div class="text-xs text-text-main">🚫 黑名单数据库：<span class="tag-success">有效 423 个 / 正常 421 个 / 已标记 2 个 / 黑名单 0 个</span></div></div></div></div></div><script type="module">document.querySelectorAll(`.master-dashboard-demo`).forEach(e=>{let t=e.querySelectorAll(`.tab-btn`),n=e.querySelectorAll(`.tab-content`);t.forEach(e=>{e.addEventListener(`click`,()=>{let r=e.getAttribute(`data-tab`);t.forEach(e=>e.classList.remove(`active`)),n.forEach(e=>e.classList.toggle(`hidden`,e.getAttribute(`data-panel`)!==r)),e.classList.add(`active`)})})});</script>
+<div class="alert-box alert-tip"><div><strong>实测结论先说：</strong><p>IPinfo / ipregistry / ipapi / AbuseIPDB 四个库均判定为<strong>家宽</strong>，Scamalytics / AbuseIPDB 风控 0 分、ipapi 0.00%；TikTok / Netflix / Disney+ / Amazon Prime Video / ChatGPT <strong>原生解锁（US）</strong>，国内多地持续 Ping 丢包率仅 0%~3%，25 端口出站可用。</p></div></div>
+<div class="alert-box alert-warning"><div><strong>但有两个需要重点留意的问题：</strong><ol>
+<li><strong>IPQS 评分 94（高风险）</strong>，并标记代理与 VPN 风险因子，IP2Location 也判定为机房；</li>
+<li><strong>Google 系服务将该 IP 识别为中国</strong>：YouTube Premium 区域显示 CN、Google Play 商店区域为 China、Gemini 不可用。如果你的业务依赖 YouTube 或 Google 生态，请谨慎选择。</li>
+</ol></div></div>
+<h2 id="测试环境与方法说明">测试环境与方法说明</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-scroll-wrapper"><table><thead><tr><th style="text-align:left">项目</th><th style="text-align:left">详情</th></tr></thead><tbody><tr><td style="text-align:left">CPU</td><td style="text-align:left">Intel(R) Xeon(R) Gold 6138 CPU @ 2.00GHz（1 vCore，缓存 28160 KB，AES-NI 已开启）</td></tr><tr><td style="text-align:left">内存</td><td style="text-align:left">467 MB（<code>free -h</code> 实测，对应 512 MB 规格）</td></tr><tr><td style="text-align:left">硬盘</td><td style="text-align:left">10 GB SSD（<code>df</code> 实测 9.6G，可用约 8.2G，ext4）</td></tr><tr><td style="text-align:left">虚拟化</td><td style="text-align:left">KVM</td></tr><tr><td style="text-align:left">操作系统</td><td style="text-align:left">Ubuntu 22.04 LTS，内核 5.15.0-30-generic</td></tr><tr><td style="text-align:left">机房位置</td><td style="text-align:left">美国纽约（AS174 Cogent Communications, LLC）</td></tr><tr><td style="text-align:left">网络栈</td><td style="text-align:left">IPv4 在线 / IPv6 未分配</td></tr><tr><td style="text-align:left">TCP 拥塞控制</td><td style="text-align:left">cubic（<strong>默认未开启 BBR</strong>，强烈建议手动开启）</td></tr><tr><td style="text-align:left">测试工具</td><td style="text-align:left">sysbench、fio、bench.sh、check.unlock.media、IPQuality (xykt)、Tcptest、iperf3</td></tr></tbody></table></div>
+<h2 id="ip-纯净度检测四库家宽但-ipqs-给出-94-分">IP 纯净度检测：四库家宽，但 IPQS 给出 94 分</h2>
+<figure class="screenshot-card" data-astro-cid-pmiqfeva><div class="screenshot-img-wrap" data-astro-cid-pmiqfeva><img src="/images/reviews/wepc-nyc-cogent/ipquality-report.png" alt="IPQuality 综合体检报告截图" loading="lazy" class="screenshot-zoomable" data-astro-cid-pmiqfeva><span class="screenshot-zoom-hint" aria-hidden="true" data-astro-cid-pmiqfeva>🔍 点击放大</span></div><figcaption data-astro-cid-pmiqfeva>🖼️ IPQuality (xykt)：IP 类型属性 / 风险评分 / 风险因子 / 流媒体解锁 / 邮局连通性</figcaption></figure><script type="module">function e(){let e=document.getElementById(`screenshot-lightbox`);if(!e){e=document.createElement(`div`),e.id=`screenshot-lightbox`,e.innerHTML=`<button type="button" class="screenshot-lightbox-close" aria-label="关闭">✕</button><img alt="" />`,document.body.appendChild(e);let t=()=>e.classList.remove(`open`);e.addEventListener(`click`,t),e.querySelector(`img`).addEventListener(`click`,e=>e.stopPropagation()),e.querySelector(`.screenshot-lightbox-close`).addEventListener(`click`,t)}return e}document.addEventListener(`click`,t=>{let n=t.target.closest(`.screenshot-zoomable`);if(!n)return;let r=e(),i=r.querySelector(`img`);i.src=n.src,i.alt=n.alt,r.classList.add(`open`)}),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&document.getElementById(`screenshot-lightbox`)?.classList.remove(`open`)});</script>
+<h3 id="ip-类型属性">IP 类型属性</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-scroll-wrapper"><table><thead><tr><th style="text-align:left">数据库</th><th style="text-align:left">使用类型</th><th style="text-align:left">公司类型</th></tr></thead><tbody><tr><td style="text-align:left">Maxmind</td><td style="text-align:left">原生 IP（使用地 / 注册地均为美国）</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">IPinfo</td><td style="text-align:left">🟢 家宽</td><td style="text-align:left">商业</td></tr><tr><td style="text-align:left">ipregistry</td><td style="text-align:left">🟢 家宽</td><td style="text-align:left">家宽</td></tr><tr><td style="text-align:left">ipapi</td><td style="text-align:left">🟢 家宽</td><td style="text-align:left">家宽</td></tr><tr><td style="text-align:left">AbuseIPDB</td><td style="text-align:left">🟢 家宽</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">IP2Location</td><td style="text-align:left">🔴 机房</td><td style="text-align:left">机房</td></tr></tbody></table></div>
+<p>五个数据库中有四个把使用类型判定为<strong>家宽</strong>，其中 ipregistry 与 ipapi 连公司类型也判定为家宽，家宽属性在主流库中的认可度相当高；只有 IP2Location 判定为机房。</p>
+<div class="alert-box alert-info"><div><strong>地理定位的小细节：</strong><p>Maxmind 库中该 IP 的坐标为美国地理中心点（37.75°N, 97.82°W），城市为 N/A、时区为 America/Chicago，说明 Maxmind 只精确到「美国」这一级。bench.sh 与 OneTrust 均确认实际位置为纽约。</p></div></div>
+<h3 id="风险评分与风险因子">风险评分与风险因子</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-scroll-wrapper"><table><thead><tr><th style="text-align:left">数据库</th><th style="text-align:left">风险评分</th><th style="text-align:left">判定</th></tr></thead><tbody><tr><td style="text-align:left">IP2Location</td><td style="text-align:left">3</td><td style="text-align:left">低风险</td></tr><tr><td style="text-align:left">Scamalytics</td><td style="text-align:left">0</td><td style="text-align:left">低风险</td></tr><tr><td style="text-align:left">ipapi</td><td style="text-align:left">0.00%</td><td style="text-align:left">极低风险</td></tr><tr><td style="text-align:left">AbuseIPDB</td><td style="text-align:left">0</td><td style="text-align:left">低风险</td></tr><tr><td style="text-align:left">DB-IP</td><td style="text-align:left">—</td><td style="text-align:left">低风险</td></tr><tr><td style="text-align:left">IPQS</td><td style="text-align:left"><strong>94</strong></td><td style="text-align:left"><strong>高风险</strong></td></tr></tbody></table></div>
+<p>风险因子方面，IPQS 标记了<strong>代理</strong>和 <strong>VPN</strong>，IP2Location 与 ipapi 标记了<strong>服务器</strong>，其余各库的 Tor / 滥用 / 机器人均为「否」。</p>
+<p>大多数库给出的风险很低，但 IPQS 的 94 分已经到了高风险区间。IPQS 被不少电商、支付和广告平台用作风控数据源，如果你的业务正好对接这些平台，这一项需要认真考虑。</p>
+<h2 id="三网-ping-值与丢包测试">三网 Ping 值与丢包测试</h2>
+<h3 id="tcptest-全国-ping-值">Tcptest 全国 Ping 值</h3>
+<p>使用 Tcptest 111 个国内监测点进行拨测（下午时段）：</p>
+<figure class="screenshot-card" data-astro-cid-pmiqfeva><div class="screenshot-img-wrap" data-astro-cid-pmiqfeva><img src="/images/reviews/wepc-nyc-cogent/tcptest-ping-map.png" alt="Tcptest 中国大陆 Ping 值热力图截图" loading="lazy" class="screenshot-zoomable" data-astro-cid-pmiqfeva><span class="screenshot-zoom-hint" aria-hidden="true" data-astro-cid-pmiqfeva>🔍 点击放大</span></div><figcaption data-astro-cid-pmiqfeva>🖼️ Tcptest：111 个监测点参与测试，全国延迟分布</figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-scroll-wrapper"><table><thead><tr><th style="text-align:left">运营商</th><th style="text-align:left">最快节点</th><th style="text-align:left">最慢节点</th><th style="text-align:left">平均延迟</th></tr></thead><tbody><tr><td style="text-align:left">全部节点</td><td style="text-align:left">美国弗吉尼亚（海外）/ 7ms</td><td style="text-align:left">云南昆明联通 / 310ms</td><td style="text-align:left">243ms</td></tr><tr><td style="text-align:left">中国电信</td><td style="text-align:left">天津电信 / 209ms</td><td style="text-align:left">江苏淮安电信 / 287ms</td><td style="text-align:left">251ms</td></tr><tr><td style="text-align:left">中国联通</td><td style="text-align:left">河北承德联通 / 220ms</td><td style="text-align:left">云南昆明联通 / 310ms</td><td style="text-align:left">254ms</td></tr><tr><td style="text-align:left">中国移动</td><td style="text-align:left">北京移动 / 239ms</td><td style="text-align:left">湖南邵阳移动 / 309ms</td><td style="text-align:left">266ms</td></tr></tbody></table></div>
+<p>纽约在美东，物理距离比美西远得多，三网平均延迟在 250~266ms，全国大部分地区都在 200ms 以上。这是地理位置决定的，不是线路质量差。对延迟敏感的场景（如直播），建议选美西节点，或者搭配中转。</p>
+<h3 id="持续-ping-丢包率">持续 Ping 丢包率</h3>
+<figure class="screenshot-card" data-astro-cid-pmiqfeva><div class="screenshot-img-wrap" data-astro-cid-pmiqfeva><img src="/images/reviews/wepc-nyc-cogent/ping-loss.png" alt="国内多地持续 Ping 丢包率截图" loading="lazy" class="screenshot-zoomable" data-astro-cid-pmiqfeva><span class="screenshot-zoom-hint" aria-hidden="true" data-astro-cid-pmiqfeva>🔍 点击放大</span></div><figcaption data-astro-cid-pmiqfeva>🖼️ 国内多地三网节点持续 Ping：丢包率 / 延迟 / 抖动</figcaption></figure>
+<p>延迟虽然高，稳定性却不错：国内多地三网节点持续 Ping 的丢包率在 <strong>0%~3%</strong>，大部分在 2% 以内，抖动稳定在 4.3~5ms。晚高峰丢包率会略有上升，但日常使用完全够用。</p>
+<h2 id="回程路由测试">回程路由测试</h2>
+<figure class="screenshot-card" data-astro-cid-pmiqfeva><div class="screenshot-img-wrap" data-astro-cid-pmiqfeva><img src="/images/reviews/wepc-nyc-cogent/route-sh-telecom.png" alt="上海电信到 WePC 纽约的路由追踪截图" loading="lazy" class="screenshot-zoomable" data-astro-cid-pmiqfeva><span class="screenshot-zoom-hint" aria-hidden="true" data-astro-cid-pmiqfeva>🔍 点击放大</span></div><figcaption data-astro-cid-pmiqfeva>🖼️ 路由追踪：上海电信出发，经 AS4134 电信 163 骨干网，直接接入 Cogent（AS174）</figcaption></figure>
+<p>从<strong>上海电信</strong>出发的路由追踪显示：流量经 AS4812 上海电信城域网 → <strong>AS4134 电信 163 骨干网</strong>出境，在旧金山（sfo01）直接进入 <strong>Cogent（AS174）</strong> 骨干网，此时延迟约 141ms；之后沿 Cogent 自有骨干经盐湖城（slc03）、丹佛（den01）横穿美国，最终到达纽约。</p>
+<p>电信方向走的是 163 普通线路，不过出境后一跳就进了 Cogent，中途没有经过其他运营商，路由比较干净。</p>
+<h2 id="家庭宽带实际下载速度iperf3">家庭宽带实际下载速度（iperf3）</h2>
+<p>使用家庭 100 Mbps 电信宽带，通过 iperf3 反向测试（服务器 → 本地）实际下载速度：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-scroll-wrapper"><table><thead><tr><th style="text-align:left">拥塞控制</th><th style="text-align:left">平均下载速度</th><th style="text-align:left">峰值</th><th style="text-align:left">重传次数</th></tr></thead><tbody><tr><td style="text-align:left">cubic（默认）</td><td style="text-align:left">5.0 Mbps</td><td style="text-align:left">8.78 Mbps</td><td style="text-align:left">15</td></tr><tr><td style="text-align:left"><strong>BBR（开启后）</strong></td><td style="text-align:left"><strong>21.1 Mbps</strong></td><td style="text-align:left"><strong>45.3 Mbps</strong></td><td style="text-align:left">1089</td></tr></tbody></table></div>
+<div class="alert-box alert-tip"><div><strong>一定要开 BBR：</strong><p>默认 cubic 下，跨太平洋 + 横穿美国的长链路只能跑到 5 Mbps 左右；开启 BBR 后平均速度提升到 21 Mbps、峰值 45 Mbps，<strong>提升约 4 倍</strong>，刷视频、后台管理等日常使用都够了。开启方法见本站的 <a href="/tutorials/enable-bbr-vps">VPS 开启 BBR 教程</a>。</p></div></div>
+<h2 id="硬件配置与性能压测">硬件配置与性能压测</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-scroll-wrapper"><table><thead><tr><th style="text-align:left">测试项</th><th style="text-align:left">结果</th></tr></thead><tbody><tr><td style="text-align:left">CPU 单核性能（sysbench，events/s）</td><td style="text-align:left">807.23</td></tr><tr><td style="text-align:left">CPU 平均延迟（sysbench）</td><td style="text-align:left">1.24 ms</td></tr><tr><td style="text-align:left">内存写入带宽（sysbench memory）</td><td style="text-align:left">3777.18 MiB/s</td></tr><tr><td style="text-align:left">随机写 IOPS（fio 4K randwrite，iodepth=1）</td><td style="text-align:left">3796 IOPS（14.8 MiB/s）</td></tr><tr><td style="text-align:left">随机读 IOPS（fio 4K randread，iodepth=1）</td><td style="text-align:left">2539 IOPS（9.92 MiB/s）</td></tr><tr><td style="text-align:left">4K 混合随机读写（fio randrw）</td><td style="text-align:left">读 2168 / 写 2168 IOPS</td></tr><tr><td style="text-align:left">顺序读 / 写（fio 1M，direct=1）</td><td style="text-align:left">1020 MiB/s / 585 MiB/s</td></tr><tr><td style="text-align:left">磁盘 I/O（bench.sh dd 三次平均）</td><td style="text-align:left">200.3 MB/s</td></tr></tbody></table></div>
+<p>同样是 Xeon Gold 6138，这台单核跑到 807 events/s，内存带宽 3777 MiB/s，在入门机里算不错。顺序读超过 1 GB/s，硬盘表现也够用。短板是 <strong>512 MB 内存</strong>：开机后可用只有约 315 MB，跑代理、单账号运营这类轻量任务没问题，但装不了太重的软件栈。</p>
+<h2 id="国际出口带宽测速">国际出口带宽测速</h2>
+<p>通过 bench.sh 自带 Speedtest 节点实测：</p>
+<figure class="screenshot-card" data-astro-cid-pmiqfeva><div class="screenshot-img-wrap" data-astro-cid-pmiqfeva><img src="/images/reviews/wepc-nyc-cogent/benchsh-speedtest.png" alt="bench.sh 国际测速截图" loading="lazy" class="screenshot-zoomable" data-astro-cid-pmiqfeva><span class="screenshot-zoom-hint" aria-hidden="true" data-astro-cid-pmiqfeva>🔍 点击放大</span></div><figcaption data-astro-cid-pmiqfeva>🖼️ bench.sh：多地 Speedtest 节点上传 / 下载速度与延迟</figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-scroll-wrapper"><table><thead><tr><th style="text-align:left">测速节点</th><th style="text-align:left">上传速度</th><th style="text-align:left">下载速度</th><th style="text-align:left">延迟</th></tr></thead><tbody><tr><td style="text-align:left">Speedtest.net</td><td style="text-align:left">191.35 Mbps</td><td style="text-align:left">135.88 Mbps</td><td style="text-align:left">2.29 ms</td></tr><tr><td style="text-align:left">洛杉矶, US</td><td style="text-align:left">189.57 Mbps</td><td style="text-align:left">196.86 Mbps</td><td style="text-align:left">70.05 ms</td></tr><tr><td style="text-align:left">达拉斯, US</td><td style="text-align:left">189.81 Mbps</td><td style="text-align:left">156.11 Mbps</td><td style="text-align:left">36.81 ms</td></tr><tr><td style="text-align:left">蒙特利尔, CA</td><td style="text-align:left">189.45 Mbps</td><td style="text-align:left">135.03 Mbps</td><td style="text-align:left">14.76 ms</td></tr><tr><td style="text-align:left">巴黎, FR</td><td style="text-align:left">189.16 Mbps</td><td style="text-align:left">195.15 Mbps</td><td style="text-align:left">72.51 ms</td></tr><tr><td style="text-align:left">阿姆斯特丹, NL</td><td style="text-align:left">189.74 Mbps</td><td style="text-align:left">132.68 Mbps</td><td style="text-align:left">74.64 ms</td></tr><tr><td style="text-align:left">香港, CN</td><td style="text-align:left">2.13 Mbps</td><td style="text-align:left">1.91 Mbps</td><td style="text-align:left">244.85 ms</td></tr><tr><td style="text-align:left">新加坡, SG</td><td style="text-align:left">65.57 Mbps</td><td style="text-align:left">159.58 Mbps</td><td style="text-align:left">224.85 ms</td></tr><tr><td style="text-align:left">台北, CN</td><td style="text-align:left">93.85 Mbps</td><td style="text-align:left">190.51 Mbps</td><td style="text-align:left">173.73 ms</td></tr><tr><td style="text-align:left">东京, JP</td><td style="text-align:left">129.52 Mbps</td><td style="text-align:left">186.26 Mbps</td><td style="text-align:left">159.50 ms</td></tr></tbody></table></div>
+<p>北美和欧洲节点上传稳定在约 190 Mbps，接近 200 Mbps 标称带宽；纽约到欧洲只有 72~75ms，<strong>面向欧美市场的业务体验很好</strong>。香港节点只有约 2 Mbps，可能是那台测速服务器本身拥堵，也可能是 Cogent 到香港这条路不好；苏州、宁波两个国内节点测试失败。</p>
+<h2 id="流媒体与-ai-服务解锁实测">流媒体与 AI 服务解锁实测</h2>
+<figure class="screenshot-card" data-astro-cid-pmiqfeva><div class="screenshot-img-wrap" data-astro-cid-pmiqfeva><img src="/images/reviews/wepc-nyc-cogent/unlock-check.png" alt="check.unlock.media 流媒体解锁检测截图" loading="lazy" class="screenshot-zoomable" data-astro-cid-pmiqfeva><span class="screenshot-zoom-hint" aria-hidden="true" data-astro-cid-pmiqfeva>🔍 点击放大</span></div><figcaption data-astro-cid-pmiqfeva>🖼️ check.unlock.media：流媒体平台与 AI 服务区域限制检测结果</figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-scroll-wrapper"><table><thead><tr><th style="text-align:left">服务</th><th style="text-align:left">状态</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:left">TikTok</td><td style="text-align:left">✅ 原生解锁 (US)</td><td style="text-align:left">IPQuality 判定为原生</td></tr><tr><td style="text-align:left">Netflix</td><td style="text-align:left">✅ 原生解锁 (US)</td><td style="text-align:left">Preferred CDN: New York, NY</td></tr><tr><td style="text-align:left">Disney+</td><td style="text-align:left">✅ 原生解锁 (US)</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">Amazon Prime Video</td><td style="text-align:left">✅ 原生解锁 (US)</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">ChatGPT</td><td style="text-align:left">✅ 可用</td><td style="text-align:left">IPQuality 判定为原生</td></tr><tr><td style="text-align:left">Claude</td><td style="text-align:left">✅ 可用</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">TVBAnywhere+</td><td style="text-align:left">✅ 可用</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">Reddit</td><td style="text-align:left">✅ 可用</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">Google 搜索验证码</td><td style="text-align:left">✅ 免验证</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">Wikipedia 可编辑</td><td style="text-align:left">✅ 可用</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">Steam 货币区</td><td style="text-align:left">USD</td><td style="text-align:left">Apple 区域为 US</td></tr><tr><td style="text-align:left">OneTrust 区域</td><td style="text-align:left">US [New York]</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">YouTube Premium</td><td style="text-align:left">❌ 不可用</td><td style="text-align:left">IPQuality 显示区域为 <strong>CN</strong></td></tr><tr><td style="text-align:left">Google Play 商店</td><td style="text-align:left">⚠️ China</td><td style="text-align:left">Google 将 IP 定位为中国</td></tr><tr><td style="text-align:left">Google Gemini</td><td style="text-align:left">❌ 不可用</td><td style="text-align:left">与 Google 定位为中国有关</td></tr><tr><td style="text-align:left">Dazn</td><td style="text-align:left">❌ 检测失败</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">Spotify 新注册</td><td style="text-align:left">❌ 不可用</td><td style="text-align:left">—</td></tr><tr><td style="text-align:left">Bing 区域</td><td style="text-align:left">US（标记 Risky）</td><td style="text-align:left">部分风控场景下可能触发额外验证</td></tr></tbody></table></div>
+<div class="alert-box alert-warning"><div><strong>Google 定位问题怎么看：</strong><p>YouTube、Google Play、Gemini 这三项同时异常，基本可以确定是 <strong>Google 自己的 IP 定位库把这个 IP 归到了中国</strong>。其他平台不受影响，Netflix、TikTok、ChatGPT 都判定为美国。Google 的定位有时会随时间自动纠正，也可以向 Google 提交 IP 定位修正，但时间不可控。如果你需要美区 YouTube / Gemini，建议下单后第一时间检测，不符合就在退款期内处理（WePC 规定 3 天内且流量 10 GB 以内可退款）。</p></div></div>
+<h2 id="邮局连通性与黑名单检测">邮局连通性与黑名单检测</h2>
+<ul>
+<li><strong>本地 25 端口出站</strong>：<strong>可用</strong>，Gmail / Outlook / Yahoo / Apple / QQ / MailRU / AOL / 163 / 新浪可连通（GMX、Mail.com、搜狐不通）</li>
+<li><strong>IP 黑名单库检测</strong>：423 个有效数据库中，421 个正常，仅 2 个已标记，<strong>0 个列入黑名单</strong>，信誉非常好</li>
+</ul>
+<h2 id="优缺点总结">优缺点总结</h2>
+<div class="alert-box alert-tip"><div><strong>优点：</strong><ul>
+<li>IPinfo / ipregistry / ipapi / AbuseIPDB 四库判定为家宽，Maxmind 判定原生 IP</li>
+<li>Scamalytics / AbuseIPDB 风控 0 分，ipapi 0.00%，黑名单库 0 命中、仅 2 个标记</li>
+<li>TikTok / Netflix / Disney+ / Amazon Prime Video / ChatGPT / Claude 原生解锁（US）</li>
+<li>国内多地持续 Ping 丢包率 0%~3%，抖动约 5ms，线路稳定</li>
+<li>电信出境后直接进入 Cogent 骨干网，路由干净；到欧洲延迟仅 72~75ms</li>
+<li>25 端口出站可用；CPU 与磁盘性能在入门价位里表现较好</li>
+</ul></div></div>
+<div class="alert-box alert-warning"><div><strong>缺点：</strong><ul>
+<li><strong>IPQS 评分 94（高风险）</strong>，标记代理 / VPN 风险因子；IP2Location 判定为机房</li>
+<li><strong>Google 将 IP 定位为中国</strong>：YouTube Premium、Gemini 不可用，Google Play 区域为 China</li>
+<li>纽约地处美东，国内三网平均延迟 250~266ms，不适合直连直播</li>
+<li>默认 cubic 下家宽实际下载仅约 5 Mbps，必须手动开启 BBR（开启后约 21 Mbps）</li>
+<li>内存仅 512 MB（可用约 315 MB），未分配 IPv6</li>
+<li>退款规则严格，超过 10 天不支持退款</li>
+</ul></div></div>
+<h2 id="套餐推荐与优惠">套餐推荐与优惠</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6"><div class="pricing-card-demo popular" id="pcard-wepc-jdd9c"><div class="popular-badge">🔥 强烈推荐</div><!-- Header --><div class="pricing-card-header"><div class="pricing-provider-tag">🏷 WePC</div><div class="pricing-title" data-plan-subtitle>美国纽约Cogent_家宽</div><div class="pricing-price-area"><div class="pricing-price" data-plan-price>¥61.07<span> /mo</span></div></div></div><!-- Body: features（每个 plan 各自渲染，非激活的隐藏）--><div class="pricing-card-body"><ul class="pricing-features"><li><span>⚡ vCPU</span><span></span><strong>1 Core</strong></li><li><span>🧠 内存</span><span></span><strong>512 MB</strong></li><li><span>💾 硬盘</span><span></span><strong>10 GB SSD</strong></li><li><span>🚀 带宽</span><span></span><strong>200 Mbps</strong></li><li><span>📦 流量</span><span></span><strong>1.5 TB</strong></li></ul></div><!-- Footer --><div class="pricing-card-footer"><a href="https://wepc.au/aff.php?aff=553" class="btn-buy-demo" target="_blank" rel="nofollow noopener noreferrer">立即抢购 →</a></div></div><div class="pricing-card-demo " id="pcard-wepc-6m4p5"><!-- Header --><div class="pricing-card-header"><div class="pricing-provider-tag">🏷 WePC</div><div class="pricing-title" data-plan-subtitle>美国洛杉矶Cogent_静态家宽</div><div class="pricing-price-area"><div class="pricing-price" data-plan-price>¥61.07<span> /mo</span></div></div></div><!-- Body: features（每个 plan 各自渲染，非激活的隐藏）--><div class="pricing-card-body"><ul class="pricing-features"><li><span>⚡ vCPU</span><span></span><strong>1 Core</strong></li><li><span>🧠 内存</span><span></span><strong>512 MB</strong></li><li><span>💾 硬盘</span><span></span><strong>10 GB SSD</strong></li><li><span>🚀 带宽</span><span></span><strong>200 Mbps</strong></li><li><span>📦 流量</span><span></span><strong>1.5 TB</strong></li></ul></div><!-- Footer --><div class="pricing-card-footer"><a href="https://wepc.au/aff.php?aff=553&amp;pid=164" class="btn-buy-demo" target="_blank" rel="nofollow noopener noreferrer">查看详情 →</a></div></div></div>
+<div class="coupon-widget-demo my-6" data-astro-cid-bc36j37d><!-- 商家信息头部 --><div class="coupon-provider-info" data-astro-cid-bc36j37d><div class="coupon-provider-avatar" data-astro-cid-bc36j37d>WE</div><div data-astro-cid-bc36j37d><div class="coupon-provider-name" data-astro-cid-bc36j37d>WePC</div><div class="text-xs text-accent-amber font-semibold mt-0.5" data-astro-cid-bc36j37d>🛒 支持支付宝 / PayPal 付款</div></div></div><!-- 优惠码展示区 --><div class="coupon-middle" data-astro-cid-bc36j37d><div class="text-xs text-text-muted mb-1 font-medium" data-astro-cid-bc36j37d>WePC 专属优惠</div><div class="coupon-no-code" data-astro-cid-bc36j37d>无需优惠码，点击直达折扣页</div></div><!-- 行动按钮 --><button class="btn-action-demo coupon-cta-btn" onclick="
+      
+      window.open('https://wepc.au/aff.php?aff=553', '_blank', 'noopener,noreferrer');
+    " data-astro-cid-bc36j37d>🛒 点击前往官网 ➔</button></div>
+<p>纽约 Cogent 家宽适合<strong>面向美东和欧洲市场</strong>的 TikTok 运营与跨境电商。如果更在意国内直连延迟，同价位的洛杉矶 Cogent 静态家宽地理上更近；需要直播的话可以看 <a href="https://wepc.au/aff.php?aff=553" class="text-accent-purple hover:underline" target="_blank" rel="nofollow noopener noreferrer">WePC 洛杉矶 9929 / GTT / NTT 家宽直播线路</a>，更多节点见本站的 <a href="/wepc">WePC 品牌介绍页</a>。</p>
+<h2 id="常见问题">常见问题</h2>
+<details class="group border border-[var(--card-border)] bg-[var(--bg-card)] rounded-xl mb-4 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-astro-cid-muhqq4qj><summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-[var(--text-main)] hover:text-[var(--accent-blue)] transition-colors" data-astro-cid-muhqq4qj><span class="text-[1.1rem] font-heading font-bold" data-astro-cid-muhqq4qj>IPQS 94 分高风险，还能用来做 TikTok 吗？</span><span class="transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4 text-[var(--accent-purple)]" data-astro-cid-muhqq4qj><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" data-astro-cid-muhqq4qj><path d="M6 9l6 6 6-6" data-astro-cid-muhqq4qj></path></svg></span></summary><div class="text-[var(--text-muted)] px-5 pb-5 leading-relaxed prose prose-slate max-w-none" data-astro-cid-muhqq4qj><p>实测 TikTok 在 IPQuality 中为原生解锁（US），Scamalytics、AbuseIPDB、ipapi 等多数库也都判定为低风险，TikTok 日常运营问题不大。但 IPQS 被不少电商、支付、广告平台用作风控数据源，如果业务要对接这些平台（比如广告投放、支付收款），建议优先选 IPQS 评分更低的 IP。</p></div></details>
+<details class="group border border-[var(--card-border)] bg-[var(--bg-card)] rounded-xl mb-4 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-astro-cid-muhqq4qj><summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-[var(--text-main)] hover:text-[var(--accent-blue)] transition-colors" data-astro-cid-muhqq4qj><span class="text-[1.1rem] font-heading font-bold" data-astro-cid-muhqq4qj>为什么 YouTube 和 Google Play 显示是中国？</span><span class="transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4 text-[var(--accent-purple)]" data-astro-cid-muhqq4qj><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" data-astro-cid-muhqq4qj><path d="M6 9l6 6 6-6" data-astro-cid-muhqq4qj></path></svg></span></summary><div class="text-[var(--text-muted)] px-5 pb-5 leading-relaxed prose prose-slate max-w-none" data-astro-cid-muhqq4qj><p>这是 Google 自己的 IP 地理定位库把这个 IP 归到了中国，与 IP 实际所在地（纽约）无关。其他平台（Netflix、TikTok、ChatGPT、Disney+ 等）都正确识别为美国。Google 定位有时会自行更新，但时间不确定；如果你依赖美区 YouTube / Gemini，建议购买后第一时间检测，并利用 3 天退款期。</p></div></details>
+<details class="group border border-[var(--card-border)] bg-[var(--bg-card)] rounded-xl mb-4 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-astro-cid-muhqq4qj><summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-[var(--text-main)] hover:text-[var(--accent-blue)] transition-colors" data-astro-cid-muhqq4qj><span class="text-[1.1rem] font-heading font-bold" data-astro-cid-muhqq4qj>国内直连延迟 250ms 左右，日常使用会卡吗？</span><span class="transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4 text-[var(--accent-purple)]" data-astro-cid-muhqq4qj><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" data-astro-cid-muhqq4qj><path d="M6 9l6 6 6-6" data-astro-cid-muhqq4qj></path></svg></span></summary><div class="text-[var(--text-muted)] px-5 pb-5 leading-relaxed prose prose-slate max-w-none" data-astro-cid-muhqq4qj><p>网页浏览、后台管理、发视频基本没问题，丢包率只有 0%~3%，比较稳。但一定要开 BBR：实测家庭电信宽带下载速度从默认的 5 Mbps 提升到 21 Mbps。如果要做直播，建议选美西节点或搭配 WePC 的中转服务。</p></div></details>
+<details class="group border border-[var(--card-border)] bg-[var(--bg-card)] rounded-xl mb-4 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-astro-cid-muhqq4qj><summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-[var(--text-main)] hover:text-[var(--accent-blue)] transition-colors" data-astro-cid-muhqq4qj><span class="text-[1.1rem] font-heading font-bold" data-astro-cid-muhqq4qj>512 MB 内存够用吗？</span><span class="transition-transform duration-300 group-open:rotate-180 flex-shrink-0 ml-4 text-[var(--accent-purple)]" data-astro-cid-muhqq4qj><svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" data-astro-cid-muhqq4qj><path d="M6 9l6 6 6-6" data-astro-cid-muhqq4qj></path></svg></span></summary><div class="text-[var(--text-muted)] px-5 pb-5 leading-relaxed prose prose-slate max-w-none" data-astro-cid-muhqq4qj><p>开机后可用约 315 MB，跑 Xray / Sing-box 等代理服务、单账号运营脚本够用；但如果要装 Docker、面板或多个服务，内存会很紧张，建议只作为落地出口机使用。</p></div></details>
+<h2 id="结论">结论</h2>
+<p>综合本次测评的风控、解锁、路由、硬件与带宽数据来看，WePC 美国纽约 Cogent 家宽的优点是<strong>家宽属性在主流库中认可度高（四库判定家宽）、线路稳定丢包低、黑名单干净</strong>，面向美东和欧洲市场的网络体验也不错。但它有两个明显短板：<strong>IPQS 94 分高风险</strong>，以及 <strong>Google 将 IP 定位为中国</strong>导致 YouTube / Gemini 不可用。再加上美东到国内 250ms 以上的延迟，它更适合主要做 TikTok、Netflix 和 ChatGPT、不依赖 Google 生态、业务面向美东或欧洲的用户，而且务必开启 BBR。如果你需要 Google 服务或更低的国内延迟，建议优先考虑美西节点。</p></div></article><!-- 桌面端侧边栏 (lg+) --><aside class="w-full lg:w-[300px] shrink-0 hidden lg:block"><div class="sticky top-[90px] flex flex-col gap-5"><div class="toc-card"><div class="toc-card-header"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="15" y2="12"></line><line x1="3" y1="18" x2="18" y2="18"></line></svg>目录</div><nav class="toc-list" aria-label="文章目录"><a href="#核心数据面板" class="toc-item depth-2" data-heading="核心数据面板">核心数据面板</a><a href="#测试环境与方法说明" class="toc-item depth-2" data-heading="测试环境与方法说明">测试环境与方法说明</a><a href="#ip-纯净度检测四库家宽但-ipqs-给出-94-分" class="toc-item depth-2" data-heading="ip-纯净度检测四库家宽但-ipqs-给出-94-分">IP 纯净度检测：四库家宽，但 IPQS 给出 94 分</a><a href="#ip-类型属性" class="toc-item depth-3" data-heading="ip-类型属性">IP 类型属性</a><a href="#风险评分与风险因子" class="toc-item depth-3" data-heading="风险评分与风险因子">风险评分与风险因子</a><a href="#三网-ping-值与丢包测试" class="toc-item depth-2" data-heading="三网-ping-值与丢包测试">三网 Ping 值与丢包测试</a><a href="#tcptest-全国-ping-值" class="toc-item depth-3" data-heading="tcptest-全国-ping-值">Tcptest 全国 Ping 值</a><a href="#持续-ping-丢包率" class="toc-item depth-3" data-heading="持续-ping-丢包率">持续 Ping 丢包率</a><a href="#回程路由测试" class="toc-item depth-2" data-heading="回程路由测试">回程路由测试</a><a href="#家庭宽带实际下载速度iperf3" class="toc-item depth-2" data-heading="家庭宽带实际下载速度iperf3">家庭宽带实际下载速度（iperf3）</a><a href="#硬件配置与性能压测" class="toc-item depth-2" data-heading="硬件配置与性能压测">硬件配置与性能压测</a><a href="#国际出口带宽测速" class="toc-item depth-2" data-heading="国际出口带宽测速">国际出口带宽测速</a><a href="#流媒体与-ai-服务解锁实测" class="toc-item depth-2" data-heading="流媒体与-ai-服务解锁实测">流媒体与 AI 服务解锁实测</a><a href="#邮局连通性与黑名单检测" class="toc-item depth-2" data-heading="邮局连通性与黑名单检测">邮局连通性与黑名单检测</a><a href="#优缺点总结" class="toc-item depth-2" data-heading="优缺点总结">优缺点总结</a><a href="#套餐推荐与优惠" class="toc-item depth-2" data-heading="套餐推荐与优惠">套餐推荐与优惠</a><a href="#常见问题" class="toc-item depth-2" data-heading="常见问题">常见问题</a><a href="#结论" class="toc-item depth-2" data-heading="结论">结论</a></nav></div><script type="module">var e=document.querySelectorAll(`.toc-item[data-heading]`);if(e.length>0){let t=[];e.forEach(e=>{let n=e.dataset.heading,r=document.getElementById(n);r&&t.push(r)});let n=``,r=t=>{t!==n&&(n=t,e.forEach(e=>{e.dataset.heading===t?e.classList.add(`active`):e.classList.remove(`active`)}))},i=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&r(e.target.id)})},{rootMargin:`-75px 0px -60% 0px`,threshold:0});t.forEach(e=>i.observe(e))}</script><div class="bg-white border border-card-border rounded-2xl shadow-sm overflow-hidden"><!-- 渐变顶部装饰条 --><div class="h-1 bg-gradient-to-r from-accent-purple to-accent-blue"></div><div class="p-5"><div class="flex items-center gap-2 mb-3"><span class="text-xl">🚀</span><h4 class="font-bold text-text-title text-sm">直达官网</h4></div><p class="text-sm text-text-muted mb-4 leading-relaxed">访问 WePC 官方网站了解更多详情并购买对应套餐。</p><a href="https://wepc.au/aff.php?aff=553" target="_blank" rel="noopener noreferrer" class="block text-center bg-gradient-to-r from-accent-purple to-accent-blue text-white px-4 py-2.5 rounded-xl text-sm font-bold shadow-sm hover:shadow-md hover:opacity-90 transition-all">前往 WePC →</a></div></div></div></aside></div></div></main><footer class="mt-20 border-t border-card-border bg-[#1e293b] text-[#cbd5e1] py-12"><div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm"><div><h5 class="text-white font-bold text-base mb-4">ISPVPS.github.io</h5><p class="text-text-muted text-xs leading-relaxed">专注于全球双 ISP、原生家宽 VPS 深度测评，提供 100% 真实的 IP 纯净度风控数据与自动化对比指南。</p></div><div><h5 class="text-white font-bold text-base mb-4">快速导航</h5><ul class="space-y-2 text-xs"><li><a href="/regions" class="hover:text-white transition-colors no-underline">🌍 地区导航</a></li><li><a href="/reviews" class="hover:text-white transition-colors no-underline">🔬 深度评测</a></li><li><a href="/use-cases" class="hover:text-white transition-colors no-underline">🎯 场景方案</a></li><li><a href="/coupons" class="hover:text-white transition-colors no-underline">💰 独家优惠码</a></li><li><a href="/tutorials" class="hover:text-white transition-colors no-underline">📚 硬核科普</a></li></ul></div><div><h5 class="text-white font-bold text-base mb-4">透明度与声明</h5><p class="text-text-muted text-xs leading-relaxed">本站包含部分推广链接 (Affiliate Links)。当您通过这些链接购买服务时，本站可能会获得少许佣金，但这绝不会影响测评数据的真实性与独立性。</p></div></div><div class="max-w-[1200px] mx-auto px-6 mt-8 pt-6 border-t border-slate-700/50 text-center text-xs text-slate-400"><div class="flex justify-center gap-4 mb-3"><a href="/about" class="hover:text-white transition-colors no-underline">关于我们</a><a href="/privacy" class="hover:text-white transition-colors no-underline">隐私政策</a></div>© 2026 ISPVPS.github.io | 100% 真实数据驱动的家宽 IP 垂直指南</div></footer></body></html>
